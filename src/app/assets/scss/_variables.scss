@@ -1,0 +1,30 @@
+// Define your breakpoints (similar to Bootstrap's)
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$red: #ff0;
+
+$primary: #9DC183;
+$secondary: #6B2E59;
+$warning: #F4A261;
+$info:  #E76F51;
+$black: #333;
+$white: #FFF3E0;
+
+
+// Mixin for media queries
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in the map.";
+  }
+}

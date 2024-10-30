@@ -1,0 +1,129 @@
+@import "variables";
+
+/* Basic Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+.hero {
+
+	background-image: url('/images/portland-or-web-developer-sm.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: bottom center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+
+	@include respond-to(md) {
+		background-image: url('/images/portland-or-web-developer-lg.jpg');
+	}
+}
+
+.parallax {
+	height: 400px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+
+}
+
+.content-section {
+
+	padding: 30px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background: var(--background);
+	;
+
+	@include respond-to(md) {
+		padding: 45px 0;
+	}
+
+	@include respond-to(lg) {
+		padding: 60px 0;
+	}
+
+
+}
+
+.intro-section {
+
+	font-size: 1.15em;
+
+	p {
+		line-height: 1.6;
+		margin-bottom: 20px;
+	}
+
+	li {
+		line-height: 1.2;
+	}
+
+	ul {
+		margin-bottom: 15px;
+	}
+
+}
+
+
+
+.headshot-img {
+	max-height: 300px;
+	border-radius: 50%;
+	border: 3px solid $info;
+	max-width: 100%;
+	height: auto;
+}
+
+.item-title {
+	display: flex;
+	margin-bottom: 15px;
+	align-items: center;
+
+	.icon-wrapper {
+		margin-right: 30px;
+	}
+
+}
+
+.landscape-1 {
+
+	background-image: url('/images/suzy-landscape1-sm.jpg');
+
+	@include respond-to(md) {
+		background-image: url('/images/suzy-landscape1-lg.jpg');
+	}
+}
+
+.landscape-2 {
+	background-image: url('/images/suzy-landscape2-sm.jpg');
+
+	@include respond-to(md) {
+		background-image: url('/images/suzy-landscape2-lg.jpg');
+	}
+}
+
+
+.about-me-mobile {
+	float: right;
+	width: 30vw;
+	padding: 0 0 30px 20px;
+
+	img {
+		border-radius: 50%;
+		;
+	}
+}

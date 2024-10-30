@@ -1,0 +1,21 @@
+@import "variables";
+
+$primary-color: $primary; // Golden Sunset for links, borders, buttons
+$secondary-color: $secondary; // Deep Ocean Blue for section backgrounds
+$info-color: $info; // Soft Lavender for accents
+$warning-color: $warning;
+$background-light: $white; // Ivory White for light mode
+$background-dark: $black; // Dark background for dark mode
+$text-light: $white; // Soft Black for text on light background
+$text-dark: $black; // White text for dark mode
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  infoColor: $info-color;
+  warningColor: $warning-color;
+  backgroundLight: $background-light;
+  backgroundDark: $background-dark;
+  textLight: $text-light;
+  textDark: $text-dark;
+}

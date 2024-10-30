@@ -1,0 +1,82 @@
+@import "variables";
+
+:root {
+    --background: #FFFAF0;
+    --foreground: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1a1a1a;
+        --foreground: #FFFAF0;
+    }
+} 
+
+html {
+    scroll-behavior: smooth;
+}
+html,
+body {
+    max-width: 100vw;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+}
+
+.bg-film {
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    &::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: hsl(from var(--background) h s l / 0.65);
+        z-index: 0;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+    }
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.h-100 {
+    min-height: 100vh;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.client-logo {
+    max-width: 150px;
+}
